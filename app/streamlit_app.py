@@ -85,6 +85,28 @@ def compute_skill_freq(df, skill_cols, target_col, selected_class=None, top_n=15
 
     return freq.head(top_n)
 
+def compute_class_vs_class(df, skills_cols, target_col, clase_A, clase_B, top_n=25):
+    dfg = df.copy()
+    dfg[skills_cols] = dfg[skills_cols].fillna(0).astype(int)
+
+    A = dfg[dfg[target_col] == clase_A]
+    B = dfg[dfg[target_col] == clase_B]
+    if A.empty or B.empty:
+        return pd.DataFrame(columns=["skill", "clase", "p", "diff_AB"])
+
+    pA = A[skills_cols].mean()
+    pB = B[skills_cols].mean()
+
+    diff = (pA - pB).abs().sort_values(ascending=False).head(top_n).index
+    dfA = pd.DataFrame({"skill": diff, "clase": clase_A, "p": pA[diff].values})
+    dfB = pd.DataFrame({"skill": diff, "clase": clase_B, "p": pB[diff].values})
+    long = pd.concat([dfA, dfB], ignore_index=True)
+
+    # Para ordenar por magnitud de diferencia
+    diffs = (pA[diff] - pB[diff]).abs().rename("diff_AB").reset_index().rename(columns={"index": "skill"})
+    long = long.merge(diffs, on="skill", how="left")
+    return long.sort_values("diff_AB", ascending=False)
+
 
 # ================================
 # Páginas / Secciones
@@ -191,6 +213,70 @@ def page_exploracion(df, skills_cols, class_labels):
                 )
 
                 st.altair_chart(chart_hard, use_container_width=True)
+
+# ---------- Gráfico Comparador de clases ------------------
+    st.markdown("---")
+    st.header("⚔️ Comparador de clases por skills")
+
+    st.markdown(
+        """
+        Este gráfico permite comparar **dos clases de puestos** y ver en qué **skills difieren más**.
+        Cada fila es una skill y los puntos muestran la proporción de ofertas dentro de cada clase
+        que mencionan esa skill. Cuanto más separadas estén las dos marcas, mayor es la diferencia.
+        """
+    )
+
+    # Asegurar lista de clases
+    clases_sorted = sorted(df[TARGET_COL].dropna().unique())
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        clase_A = st.selectbox("Clase A", options=clases_sorted, key="cmp_A_bottom")
+    with col2:
+        clase_B = st.selectbox(
+            "Clase B",
+            options=[c for c in clases_sorted if c != clase_A],
+            key="cmp_B_bottom",
+        )
+    with col3:
+        topN_cmp = st.slider("Top N por diferencia", 5, 40, 20, step=5, key="cmp_topN_bottom")
+
+    long = compute_class_vs_class(df, skills_cols, TARGET_COL, clase_A, clase_B, top_n=topN_cmp)
+
+    if long.empty:
+        st.info("No hay suficientes datos para la comparación.")
+    else:
+        lines = (
+            alt.Chart(long)
+            .mark_line()
+            .encode(
+                x=alt.X("p:Q", title="Proporción de ofertas con la skill", scale=alt.Scale(domain=[0, 1])),
+                y=alt.Y("skill:N", sort=alt.SortField(field="diff_AB", order="descending")),
+                detail="skill:N",
+            )
+        )
+
+        points = (
+            alt.Chart(long)
+            .mark_point(filled=True, size=70)
+            .encode(
+                x="p:Q",
+                y="skill:N",
+                color=alt.Color("clase:N", title="Clase"),
+                tooltip=[
+                    alt.Tooltip("skill:N", title="Skill"),
+                    alt.Tooltip("clase:N", title="Clase"),
+                    alt.Tooltip("p:Q", title="Proporción", format=".2f"),
+                    alt.Tooltip("diff_AB:Q", title="|Δ| A vs B", format=".2f"),
+                ],
+            )
+        )
+
+        st.altair_chart(lines + points, use_container_width=True)
+        st.caption(
+            "Cada fila tiene dos puntos (A y B) conectados. Cuanto más separados, "
+            "mayor diferencia entre clases en esa skill."
+        )
 
 
 def page_rendimiento(df_res, class_labels):

@@ -22,21 +22,21 @@ La app final fue desarrollada con **Streamlit** y **Altair**, integrando:
 
 ## 🧩 Estructura del proyecto
 
+```text
 Proyecto_Final/
 ├── app/
-│ └── streamlit_app.py # App principal de Streamlit
+│   └── streamlit_app.py              # App principal de Streamlit
 ├── models/
-│ ├── best_model.pkl # Modelo final entrenado (Gradient Boosting)
-│ ├── skills_cols.json # Lista de columnas usadas por el modelo
-│ └── class_labels.json # Nombres de las clases objetivo
-├── resultados_test.csv # Resultados reales vs predichos (test)
-├── computrabajo_2025-10-17_limpio_full.csv # Dataset limpio
-├── Entrega3.ipynb # Notebook de modelado y evaluación
-├── requirements.txt # Dependencias del proyecto
-└── README.md # Este archivo
+│   ├── best_model.pkl                # Modelo final entrenado (Gradient Boosting)
+│   ├── skills_cols.json              # Lista de columnas usadas por el modelo
+│   └── class_labels.json             # Nombres de las clases objetivo
+├── resultados_test.csv               # Resultados reales vs predichos (test)
+├── computrabajo_2025-10-17_limpio_full.csv   # Dataset limpio
+├── Entrega3.ipynb                    # Notebook de modelado y evaluación
+├── requirements.txt                  # Dependencias del proyecto
+└── README.md                         # Este archivo
 
-
-
+```
 ---
 
 ## ⚙️ Cómo ejecutar la aplicación localmente
@@ -62,31 +62,27 @@ Proyecto_Final/
 
 5. Abrí el enlace local que aparece en la consola (por defecto http://localhost:8501).
 
-🖼️ Secciones de la aplicación
+## 🖼️ Secciones de la aplicación
+---
 
-🏠 Inicio
-
+### 🏠 **Inicio**
 Presenta la descripción general del proyecto, el tipo de modelo utilizado y las clases que puede predecir.
 
-📊 Exploración de datos
 
-Incluye dos visualizaciones interactivas con Altair:
+### 📊 **Exploración de datos**
+Incluye visualizaciones interactivas construidas con **Altair**:
+- 📈 Frecuencia de *soft skills* por tipo de puesto.  
+- 💻 Frecuencia de *hard skills* por tipo de puesto.
 
-Frecuencia de soft skills por tipo de puesto.
+Permite comparar qué habilidades predominan según la variable `clase_general`.
 
-Frecuencia de hard skills por tipo de puesto.
 
-Permite comparar qué habilidades predominan según la clase_general.
-
-📉 Rendimiento del modelo
-
+### 📉 **Rendimiento del modelo**
 Muestra:
+- **Métricas globales:** *Accuracy* y *F1-macro*.  
+- **Matriz de confusión interactiva:** con colores y conteos por celda, para identificar las clases que el modelo predice mejor o confunde más.
 
-Métricas globales: Accuracy y F1-macro.
 
-Matriz de confusión interactiva: con colores y conteos por celda, para identificar las clases que el modelo predice mejor o confunde más.
-
-🧠 Predicción y comportamiento
-
-Ofrece una interfaz simple para armar un perfil seleccionando hard y soft skills.
-El modelo predice la clase general correspondiente y muestra un gráfico de barras con las probabilidades por clase.
+### 🧠 **Predicción y comportamiento**
+Ofrece una interfaz sencilla para construir un perfil seleccionando *hard* y *soft skills*.  
+El modelo predice la **clase general** correspondiente y muestra un **gráfico de barras** con las probabilidades por clase.

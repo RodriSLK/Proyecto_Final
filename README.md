@@ -62,8 +62,9 @@ Proyecto_Final/
 
 5. Abrí el enlace local que aparece en la consola (por defecto http://localhost:8501).
 
-## 🖼️ Secciones de la aplicación
 ---
+
+## 🖼️ Secciones de la aplicación
 
 ### 🏠 **Inicio**
 Presenta la descripción general del proyecto, el tipo de modelo utilizado y las clases que puede predecir.

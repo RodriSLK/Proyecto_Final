@@ -50,15 +50,30 @@ def load_data():
     return df
 
 
+#@st.cache_data
+#def load_results():
+ #   """
+  #  Carga el CSV con los resultados de test:
+   # columnas 'real' y 'predicho'.
+   # """
+    #results_path = Path(__file__).resolve().parent.parent / "resultados_test.csv"
+    #df_res = pd.read_csv(results_path)
+    #return df_res
+
 @st.cache_data
 def load_results():
     """
-    Carga el CSV con los resultados de test:
-    columnas 'real' y 'predicho'.
+    Carga el CSV con los resultados de test de TODOS los modelos.
+    Se espera un archivo con columnas:
+    - modelo_id
+    - modelo_nombre
+    - real
+    - predicho
     """
     results_path = Path(__file__).resolve().parent.parent / "resultados_test.csv"
     df_res = pd.read_csv(results_path)
     return df_res
+
 
 
 # ================================
@@ -280,12 +295,12 @@ def page_exploracion(df, skills_cols, class_labels):
 
 
 def page_rendimiento(df_res, class_labels):
-    st.title("📉 Rendimiento del modelo")
+    st.title("📉 Rendimiento de los modelos")
 
     st.markdown(
         """
-        A continuación se muestran las métricas de rendimiento del modelo
-        sobre el conjunto de **test**, junto con la **matriz de confusión**.
+        En esta sección se comparan los **4 modelos entrenados** para predecir la `clase_general`
+        y se muestra la **matriz de confusión normalizada** para el modelo seleccionado.
         """
     )
 
@@ -293,68 +308,155 @@ def page_rendimiento(df_res, class_labels):
         st.warning("El archivo de resultados de test está vacío.")
         return
 
-    y_true = df_res["real"]
-    y_pred = df_res["predicho"]
+    from sklearn.metrics import accuracy_score, f1_score
 
-    # Métricas globales
-    acc = accuracy_score(y_true, y_pred)
-    f1 = f1_score(y_true, y_pred, average="macro")
+    # =========================
+    # 1) Tabla de métricas por modelo
+    # =========================
+    metrics = []
+    for (modelo_id, modelo_nombre), grupo in df_res.groupby(["modelo_id", "modelo_nombre"]):
+        y_true = grupo["real"]
+        y_pred = grupo["predicho"]
+        acc = accuracy_score(y_true, y_pred)
+        f1 = f1_score(y_true, y_pred, average="macro")
+        metrics.append({
+            "modelo_id": modelo_id,
+            "Modelo": modelo_nombre,
+            "Accuracy (test)": acc,
+            "F1-macro (test)": f1,
+        })
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.metric("Accuracy (test)", f"{acc:.3f}")
-    with col2:
-        st.metric("F1-macro (test)", f"{f1:.3f}")
+    df_metrics = pd.DataFrame(metrics)
+    df_metrics[["Accuracy (test)", "F1-macro (test)"]] = df_metrics[
+        ["Accuracy (test)", "F1-macro (test)"]
+    ].round(3)
 
-    st.markdown("### Matriz de confusión")
+    # Ordenar por F1 de mayor a menor
+    df_metrics = df_metrics.sort_values("F1-macro (test)", ascending=False)
 
-    # Matriz de confusión con orden consistente de clases
-    cm = confusion_matrix(y_true, y_pred, labels=class_labels)
-    cm_df = pd.DataFrame(cm, index=class_labels, columns=class_labels)
-
-    # Pasar a formato largo (long) para Altair
-    cm_long = (
-        cm_df.reset_index()
-        .melt(id_vars="index", var_name="Predicha", value_name="count")
-        .rename(columns={"index": "Real"})
+    st.subheader("Resumen de métricas en test")
+    st.dataframe(
+        df_metrics[["Modelo", "Accuracy (test)", "F1-macro (test)"]],
+        use_container_width=True,
     )
 
-    # Heatmap de fondo (colores)
+    st.markdown("---")
+
+    # =========================
+    # 2) Selector de modelo para matriz de confusión
+    # =========================
+    st.subheader("Matriz de confusión por modelo")
+
+    modelos_dict = {
+        row["Modelo"]: row["modelo_id"]
+        for _, row in df_metrics.iterrows()
+    }
+
+    modelo_nombre_sel = st.selectbox(
+        "Elegí un modelo para visualizar su matriz de confusión:",
+        options=list(modelos_dict.keys()),
+    )
+    modelo_id_sel = modelos_dict[modelo_nombre_sel]
+
+    df_sel = df_res[df_res["modelo_id"] == modelo_id_sel]
+
+    if df_sel.empty:
+        st.warning("No hay datos de test para ese modelo.")
+        return
+
+    y_true = df_sel["real"]
+    y_pred = df_sel["predicho"]
+
+    # 👉 Métricas SOLO del modelo seleccionado
+    acc_sel = accuracy_score(y_true, y_pred)
+    f1_sel = f1_score(y_true, y_pred, average="macro")
+
+    st.markdown(
+        f"""
+        **Rendimiento del modelo seleccionado:**  
+        - Modelo: **{modelo_nombre_sel}**  
+        - Accuracy (test): **{acc_sel:.3f}**  
+        - F1-macro (test): **{f1_sel:.3f}**
+        """
+    )
+
+    # =========================
+    # 3) Matriz de confusión normalizada (Altair)
+    # =========================
+    from sklearn.metrics import confusion_matrix
+
+    cm = confusion_matrix(y_true, y_pred, labels=class_labels, normalize="true")
+
+    # DataFrame en formato largo para Altair
+    cm_df = pd.DataFrame(cm, index=class_labels, columns=class_labels)
+    cm_long = (
+        cm_df.reset_index()
+        .melt(id_vars="index", var_name="Predicha", value_name="valor")
+        .rename(columns={"index": "Real"})
+    )
+    cm_long["es_diagonal"] = cm_long["Real"] == cm_long["Predicha"]
+
+    st.markdown(f"#### Matriz de confusión para – {modelo_nombre_sel}")
+
+    base = alt.Chart(cm_long)
+
+    # Heatmap de fondo
     heatmap = (
-        alt.Chart(cm_long)
-        .mark_rect()
+        base.mark_rect()
         .encode(
             x=alt.X("Predicha:N", title="Clase predicha"),
             y=alt.Y("Real:N", title="Clase real"),
-            color=alt.Color("count:Q", title="Cantidad"),
+            color=alt.Color(
+                "valor:Q",
+                title="Proporción",
+                scale=alt.Scale(domain=[0, 1]),
+            ),
             tooltip=[
                 alt.Tooltip("Real:N", title="Clase real"),
                 alt.Tooltip("Predicha:N", title="Clase predicha"),
-                alt.Tooltip("count:Q", title="Cantidad"),
+                alt.Tooltip("valor:Q", title="Proporción", format=".2f"),
             ],
         )
         .properties(height=400)
     )
 
-    # Números encima de cada celda
-    text = (
-        alt.Chart(cm_long)
-        .mark_text(baseline="middle")
+    # Borde rojo en la diagonal (para resaltar aciertos)
+    diag_outline = (
+        base.transform_filter("datum.es_diagonal == true")
+        .mark_rect(
+            fillOpacity=0,
+            stroke="white",
+            strokeWidth=2,
+        )
         .encode(
             x="Predicha:N",
             y="Real:N",
-            text=alt.Text("count:Q", format=".0f"),
         )
     )
 
-    chart_cm = heatmap + text
+    # 👉 Números más visibles: bold, tamaño más grande, mayor contraste
+    text = (
+        base.mark_text(baseline="middle", fontWeight="bold", size=14)
+        .encode(
+            x="Predicha:N",
+            y="Real:N",
+            text=alt.Text("valor:Q", format=".2f"),
+            color=alt.condition(
+                "datum.valor > 0.6",         # en celdas muy oscuras, texto blanco
+                alt.value("white"),
+                alt.value("black"),          # en el resto, texto negro (más “oscuro”)
+            ),
+        )
+    )
+
+    chart_cm = heatmap + diag_outline + text
 
     st.altair_chart(chart_cm, use_container_width=True)
 
     st.caption(
-        "La matriz de confusión muestra en el eje vertical las clases reales y en el eje horizontal "
-        "las clases predichas. Cada celda indica cuántos casos caen en esa combinación."
+        "Para las predicciones futuras se utilizara el modelo Gradient Boosting"
     )
+
 
 
 def build_input_from_skills(selected_skills, skills_cols):
@@ -389,21 +491,25 @@ def page_prediccion(model, class_labels, skills_cols):
     col_soft, col_hard = st.columns(2)
 
     with col_soft:
-        with st.expander("🧠 Soft skills (click para desplegar)", expanded=False):
-            selected_soft = st.multiselect(
-                "Elegí soft skills para el perfil:",
-                options=soft_cols,
-                format_func=lambda s: s.replace("soft_", "").replace("_", " ").capitalize(),
-            )
+        st.subheader("🧠 Soft Skills")
+        selected_soft = st.pills(
+            "Seleccioná las soft skills del perfil:",
+            options=soft_cols,
+            selection_mode="multi",
+            format_func=lambda s: s.replace("soft_", "").replace("_", " ").capitalize(),
+        )
 
     with col_hard:
-        with st.expander("💻 Hard skills (click para desplegar)", expanded=False):
-            selected_hard = st.multiselect(
-                "Elegí hard skills para el perfil:",
-                options=hard_cols,
-            )
+        st.subheader("💻 Hard Skills")
+        selected_hard = st.pills(
+            "Seleccioná las hard skills del perfil:",
+            options=hard_cols,
+            selection_mode="multi",
+            format_func=lambda s: s.replace("_", " ").upper(),
+        )
 
     selected_skills = selected_soft + selected_hard
+
 
     st.markdown("### Perfil armado")
     if selected_skills:
@@ -450,7 +556,7 @@ def page_prediccion(model, class_labels, skills_cols):
                 probs = None
                 df_probs = None
         except Exception as e:
-            st.error("❌ Ocurrió un error al realizar la predicción.")
+            st.error(" Ocurrió un error al realizar la predicción.")
             st.exception(e)
             return
 

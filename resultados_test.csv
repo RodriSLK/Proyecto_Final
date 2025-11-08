@@ -1,96 +1,381 @@
-real,predicho
-Desarrollador,UX / Diseño
-No Pertenece a IT,No Pertenece a IT
-Analista / Gestión,QA / Testing
-No Pertenece a IT,Infraestructura / DevOps / Seguridad
-Tecnico / Soporte,No Pertenece a IT
-No Pertenece a IT,Datos / BI
-Tecnico / Soporte,No Pertenece a IT
-Analista / Gestión,Analista / Gestión
-No Pertenece a IT,No Pertenece a IT
-No Pertenece a IT,No Pertenece a IT
-Desarrollador,Desarrollador
-Tecnico / Soporte,UX / Diseño
-No Pertenece a IT,Analista / Gestión
-Tecnico / Soporte,Analista / Gestión
-Analista / Gestión,Infraestructura / DevOps / Seguridad
-Analista / Gestión,Analista / Gestión
-QA / Testing,QA / Testing
-No Pertenece a IT,Datos / BI
-No Pertenece a IT,Analista / Gestión
-Desarrollador,QA / Testing
-No Pertenece a IT,No Pertenece a IT
-Analista / Gestión,Datos / BI
-Desarrollador,Desarrollador
-Tecnico / Soporte,Tecnico / Soporte
-No Pertenece a IT,Analista / Gestión
-No Pertenece a IT,No Pertenece a IT
-Tecnico / Soporte,UX / Diseño
-Tecnico / Soporte,Tecnico / Soporte
-No Pertenece a IT,No Pertenece a IT
-No Pertenece a IT,Analista / Gestión
-QA / Testing,Desarrollador
-Datos / BI,QA / Testing
-Tecnico / Soporte,No Pertenece a IT
-No Pertenece a IT,Datos / BI
-QA / Testing,QA / Testing
-No Pertenece a IT,No Pertenece a IT
-Desarrollador,Desarrollador
-No Pertenece a IT,No Pertenece a IT
-Infraestructura / DevOps / Seguridad,Tecnico / Soporte
-UX / Diseño,No Pertenece a IT
-Analista / Gestión,UX / Diseño
-Desarrollador,Desarrollador
-Desarrollador,Infraestructura / DevOps / Seguridad
-No Pertenece a IT,No Pertenece a IT
-Analista / Gestión,No Pertenece a IT
-Desarrollador,Desarrollador
-Analista / Gestión,No Pertenece a IT
-No Pertenece a IT,Tecnico / Soporte
-No Pertenece a IT,Datos / BI
-No Pertenece a IT,No Pertenece a IT
-Datos / BI,Analista / Gestión
-Desarrollador,Infraestructura / DevOps / Seguridad
-No Pertenece a IT,No Pertenece a IT
-Desarrollador,No Pertenece a IT
-No Pertenece a IT,Analista / Gestión
-No Pertenece a IT,No Pertenece a IT
-No Pertenece a IT,No Pertenece a IT
-Tecnico / Soporte,No Pertenece a IT
-No Pertenece a IT,No Pertenece a IT
-Tecnico / Soporte,Analista / Gestión
-No Pertenece a IT,Datos / BI
-Analista / Gestión,Analista / Gestión
-Desarrollador,Desarrollador
-Infraestructura / DevOps / Seguridad,UX / Diseño
-Infraestructura / DevOps / Seguridad,Tecnico / Soporte
-Infraestructura / DevOps / Seguridad,No Pertenece a IT
-Analista / Gestión,Analista / Gestión
-Desarrollador,QA / Testing
-Tecnico / Soporte,No Pertenece a IT
-No Pertenece a IT,Datos / BI
-Analista / Gestión,Datos / BI
-No Pertenece a IT,No Pertenece a IT
-No Pertenece a IT,Datos / BI
-Analista / Gestión,Infraestructura / DevOps / Seguridad
-No Pertenece a IT,Datos / BI
-Desarrollador,Desarrollador
-No Pertenece a IT,Datos / BI
-Analista / Gestión,Datos / BI
-No Pertenece a IT,No Pertenece a IT
-Infraestructura / DevOps / Seguridad,Infraestructura / DevOps / Seguridad
-No Pertenece a IT,Infraestructura / DevOps / Seguridad
-Desarrollador,Desarrollador
-No Pertenece a IT,No Pertenece a IT
-Analista / Gestión,No Pertenece a IT
-Desarrollador,Datos / BI
-Analista / Gestión,No Pertenece a IT
-Desarrollador,Tecnico / Soporte
-Analista / Gestión,Datos / BI
-Analista / Gestión,Infraestructura / DevOps / Seguridad
-No Pertenece a IT,No Pertenece a IT
-No Pertenece a IT,Infraestructura / DevOps / Seguridad
-Analista / Gestión,No Pertenece a IT
-Desarrollador,No Pertenece a IT
-Analista / Gestión,No Pertenece a IT
-Tecnico / Soporte,Datos / BI
+modelo_id,modelo_nombre,real,predicho
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),QA / Testing,QA / Testing
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,Tecnico / Soporte
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,Analista / Gestión
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),QA / Testing,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Datos / BI,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),QA / Testing,QA / Testing
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Infraestructura / DevOps / Seguridad,Tecnico / Soporte
+linearsvc_cv,LinearSVC (mejor CV),UX / Diseño,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,Tecnico / Soporte
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Datos / BI,Analista / Gestión
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Infraestructura / DevOps / Seguridad,Datos / BI
+linearsvc_cv,LinearSVC (mejor CV),Infraestructura / DevOps / Seguridad,Infraestructura / DevOps / Seguridad
+linearsvc_cv,LinearSVC (mejor CV),Infraestructura / DevOps / Seguridad,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,Tecnico / Soporte
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Infraestructura / DevOps / Seguridad,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),No Pertenece a IT,Desarrollador
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Desarrollador,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Analista / Gestión,No Pertenece a IT
+linearsvc_cv,LinearSVC (mejor CV),Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,QA / Testing,QA / Testing
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,Desarrollador
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,Desarrollador
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,Analista / Gestión
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,Analista / Gestión
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,QA / Testing,Desarrollador
+linearsvc_cal,LinearSVC calibrado,Datos / BI,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,QA / Testing,QA / Testing
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,Desarrollador
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Infraestructura / DevOps / Seguridad,Tecnico / Soporte
+linearsvc_cal,LinearSVC calibrado,UX / Diseño,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,Desarrollador
+linearsvc_cal,LinearSVC calibrado,Desarrollador,Desarrollador
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,Desarrollador
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Datos / BI,Analista / Gestión
+linearsvc_cal,LinearSVC calibrado,Desarrollador,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,Analista / Gestión
+linearsvc_cal,LinearSVC calibrado,Desarrollador,Desarrollador
+linearsvc_cal,LinearSVC calibrado,Infraestructura / DevOps / Seguridad,Analista / Gestión
+linearsvc_cal,LinearSVC calibrado,Infraestructura / DevOps / Seguridad,Infraestructura / DevOps / Seguridad
+linearsvc_cal,LinearSVC calibrado,Infraestructura / DevOps / Seguridad,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,Analista / Gestión
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,Analista / Gestión
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Infraestructura / DevOps / Seguridad,Desarrollador
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,Desarrollador
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,Desarrollador
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,No Pertenece a IT,Desarrollador
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Desarrollador,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Analista / Gestión,No Pertenece a IT
+linearsvc_cal,LinearSVC calibrado,Tecnico / Soporte,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,UX / Diseño
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,QA / Testing
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Infraestructura / DevOps / Seguridad
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Desarrollador
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,UX / Diseño
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Infraestructura / DevOps / Seguridad
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),QA / Testing,QA / Testing
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,QA / Testing
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Desarrollador
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,Tecnico / Soporte
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,UX / Diseño
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,Tecnico / Soporte
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),QA / Testing,Desarrollador
+gb_ponderado,GradientBoosting (ponderado),Datos / BI,QA / Testing
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),QA / Testing,QA / Testing
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Desarrollador
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Infraestructura / DevOps / Seguridad,Tecnico / Soporte
+gb_ponderado,GradientBoosting (ponderado),UX / Diseño,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,UX / Diseño
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Desarrollador
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Infraestructura / DevOps / Seguridad
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Desarrollador
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Tecnico / Soporte
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Datos / BI,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Infraestructura / DevOps / Seguridad
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Desarrollador
+gb_ponderado,GradientBoosting (ponderado),Infraestructura / DevOps / Seguridad,UX / Diseño
+gb_ponderado,GradientBoosting (ponderado),Infraestructura / DevOps / Seguridad,Tecnico / Soporte
+gb_ponderado,GradientBoosting (ponderado),Infraestructura / DevOps / Seguridad,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Analista / Gestión
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,QA / Testing
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Infraestructura / DevOps / Seguridad
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Desarrollador
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Infraestructura / DevOps / Seguridad,Infraestructura / DevOps / Seguridad
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Infraestructura / DevOps / Seguridad
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Desarrollador
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,Tecnico / Soporte
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Datos / BI
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,Infraestructura / DevOps / Seguridad
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),No Pertenece a IT,Infraestructura / DevOps / Seguridad
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Desarrollador,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Analista / Gestión,No Pertenece a IT
+gb_ponderado,GradientBoosting (ponderado),Tecnico / Soporte,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Analista / Gestión
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,QA / Testing
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Infraestructura / DevOps / Seguridad
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Infraestructura / DevOps / Seguridad
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Infraestructura / DevOps / Seguridad
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Analista / Gestión
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,UX / Diseño
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Analista / Gestión
+logreg_balanceada,LogisticRegression (balanceada),QA / Testing,QA / Testing
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Analista / Gestión
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,QA / Testing
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Desarrollador
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Analista / Gestión
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,QA / Testing
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Analista / Gestión
+logreg_balanceada,LogisticRegression (balanceada),QA / Testing,Desarrollador
+logreg_balanceada,LogisticRegression (balanceada),Datos / BI,QA / Testing
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),QA / Testing,QA / Testing
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Desarrollador
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Infraestructura / DevOps / Seguridad,UX / Diseño
+logreg_balanceada,LogisticRegression (balanceada),UX / Diseño,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,UX / Diseño
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Desarrollador
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Infraestructura / DevOps / Seguridad
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Desarrollador
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Datos / BI,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,QA / Testing
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,UX / Diseño
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,UX / Diseño
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Analista / Gestión
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Desarrollador
+logreg_balanceada,LogisticRegression (balanceada),Infraestructura / DevOps / Seguridad,UX / Diseño
+logreg_balanceada,LogisticRegression (balanceada),Infraestructura / DevOps / Seguridad,Infraestructura / DevOps / Seguridad
+logreg_balanceada,LogisticRegression (balanceada),Infraestructura / DevOps / Seguridad,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,UX / Diseño
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,QA / Testing
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Infraestructura / DevOps / Seguridad
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Infraestructura / DevOps / Seguridad
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Infraestructura / DevOps / Seguridad,Desarrollador
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Infraestructura / DevOps / Seguridad
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Datos / BI
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Infraestructura / DevOps / Seguridad
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,No Pertenece a IT
+logreg_balanceada,LogisticRegression (balanceada),No Pertenece a IT,Desarrollador
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Desarrollador,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Analista / Gestión,Tecnico / Soporte
+logreg_balanceada,LogisticRegression (balanceada),Tecnico / Soporte,Datos / BI

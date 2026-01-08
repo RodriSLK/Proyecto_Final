@@ -7,8 +7,7 @@ El objetivo es construir una aplicación interactiva que integre todo el trabajo
 
 ## 🚀 Descripción del proyecto
 
-El modelo predice la variable **`clase_general`** (tipo de puesto IT: Analista, Desarrollador, QA, etc.)  
-a partir de la presencia/ausencia de **hard skills** y **soft skills** en las ofertas laborales.
+El modelo predice la variable **`clase_general`** (tipo de puesto IT: Analista, Desarrollador, QA, etc.) a partir de la presencia/ausencia de **hard skills** y **soft skills** en las ofertas laborales.
 
 Para ello se utilizó un pipeline completo en *Scikit-learn* con un **Gradient Boosting optimizado mediante GridSearchCV**, alcanzando un buen equilibrio entre rendimiento y generalización.
 
@@ -47,17 +46,17 @@ Proyecto_Final/
    cd Proyecto_Final
 
 2. Creá y activá un entorno virtual (opcional pero recomendado):
-
+   ```bash
      python -m venv .venv
     .venv\Scripts\activate    # En Windows
     source .venv/bin/activate # En Linux/Mac
 
 3. Instalá las dependencias:
-
+   ```bash
     pip install -r requirements.txt
 
 4. Ejecutá la aplicación:
-
+   ```bash
     streamlit run app/streamlit_app.py
 
 5. Abrí el enlace local que aparece en la consola (por defecto http://localhost:8501).
@@ -87,3 +86,10 @@ Muestra:
 ### 🧠 **Predicción y comportamiento**
 Ofrece una interfaz sencilla para construir un perfil seleccionando *hard* y *soft skills*.  
 El modelo predice la **clase general** correspondiente y muestra un **gráfico de barras** con las probabilidades por clase.
+
+### 📹 **Muestra de prototipo en Streamlit**
+https://github.com/user-attachments/assets/43af919c-5ff1-4c20-80c0-244134548de0
+
+https://github.com/user-attachments/assets/00bd1498-88cd-45df-97e2-925ffea1c18c
+
+
